@@ -1,10 +1,11 @@
-# gRPC + PostgreSQL + FastAPI + Tkinter + Swing
+# gRPC + PostgreSQL + FastAPI + React + Tkinter + Swing
 
-Proyecto con backend en Python (FastAPI + gRPC) y clientes Tkinter (Python) y Swing (Java) conectados por gRPC a una base de datos PostgreSQL local.
+Proyecto con backend en Python (FastAPI + gRPC) y clientes React (Web), Tkinter (Python) y Swing (Java) conectados a una base de datos PostgreSQL local.
 
 ## Estructura
 - `backend/`: FastAPI + gRPC + PostgreSQL
-- `clients/tkinter/`: Cliente Python Tkinter
+- `clients/react-frontend/`: Cliente React (Web) - Interfaz web moderna con diseño limpio
+- `clients/tkinter/`: Cliente Python Tkinter (gRPC)
 - `clients/java_swing/`: Cliente Java Swing (gRPC)
 - `backend/proto/vehicle.proto`: contrato gRPC
 
@@ -14,7 +15,10 @@ Proyecto con backend en Python (FastAPI + gRPC) y clientes Tkinter (Python) y Sw
 3. Instala dependencias del backend.
 4. Genera stubs gRPC.
 5. Ejecuta el backend (gRPC + FastAPI).
-6. Abre el cliente Tkinter o el cliente Swing.
+6. Abre el cliente que prefieras:
+   - **React**: Interfaz web moderna (http://localhost:5173)
+   - **Tkinter**: Cliente Python de escritorio (gRPC)
+   - **Swing**: Cliente Java de escritorio (gRPC)
 
 ## 1) Configurar PostgreSQL (local)
 Base y credenciales usadas por defecto:
@@ -89,14 +93,33 @@ source .venv/bin/activate
 python -m app.main
 ```
 
-## 5) Cliente Tkinter
+## 5) Cliente React (Frontend Web)
+El cliente React consume los endpoints REST de FastAPI.
+```bash
+cd clients/react-frontend
+npm install   # Solo la primera vez
+npm run dev
+```
+Abre el navegador en: **http://localhost:5173**
+
+**Características:**
+- ✅ Diseño limpio y profesional (sin gradientes complejos ni colores morado/rosa)
+- ✅ Paleta de colores: Azul (#1976d2) y Gris (#546e7a)
+- ✅ CRUD completo de vehículos
+- ✅ Responsive design (móvil y escritorio)
+- ✅ Manejo de errores con alertas visuales
+- ✅ Estados de carga y feedback al usuario
+
+Ver más detalles en: `clients/react-frontend/INSTRUCCIONES.md`
+
+## 6) Cliente Tkinter (Desktop Python)
 Nota: Activar entorno desde backend
 ```bash
 cd gRPC/1_coneccion_BD/clients/tkinter
 python3 tkinter_client.py
 ```
 
-## 6) Cliente Swing
+## 7) Cliente Swing (Desktop Java)
 ```bash
 cd gRPC/1_coneccion_BD/clients/java_swing
 mvn -q -DskipTests compile

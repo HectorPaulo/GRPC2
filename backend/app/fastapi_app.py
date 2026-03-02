@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from . import db
@@ -18,6 +19,15 @@ class VehicleOut(VehicleIn):
 
 app = FastAPI(title="Vehiculos API")
 
+# Configurar CORS para permitir peticiones del frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 @app.on_event("startup")
 def startup():
@@ -27,7 +37,7 @@ def startup():
 @app.post("/vehicles", response_model=dict)
 def create_vehicle(v: VehicleIn):
     try:
-        db.create_vehicle(v.dict())
+        db.create_vehicle(v.model_dump())
         return {"ok": True, "message": "Creado"}
     except Exception as exc:
         raise HTTPException(status_code=400, detail=str(exc))
