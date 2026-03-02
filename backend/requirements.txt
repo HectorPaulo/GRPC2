@@ -1,0 +1,7 @@
+fastapi==0.110.0
+uvicorn==0.29.0
+grpcio==1.62.2; python_version < "3.13"
+grpcio-tools==1.62.2; python_version < "3.13"
+protobuf==4.25.3
+psycopg2-binary==2.9.9
+pydantic==2.6.4

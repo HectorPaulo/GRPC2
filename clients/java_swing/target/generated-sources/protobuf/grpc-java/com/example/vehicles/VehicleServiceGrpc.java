@@ -1,0 +1,515 @@
+package com.example.vehicles;
+
+import static io.grpc.MethodDescriptor.generateFullMethodName;
+
+/**
+ */
+@javax.annotation.Generated(
+    value = "by gRPC proto compiler (version 1.62.2)",
+    comments = "Source: vehicle.proto")
+@io.grpc.stub.annotations.GrpcGenerated
+public final class VehicleServiceGrpc {
+
+  private VehicleServiceGrpc() {}
+
+  public static final java.lang.String SERVICE_NAME = "vehicles.VehicleService";
+
+  // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.example.vehicles.Vehicle,
+      com.example.vehicles.OperationStatus> getCreateVehicleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateVehicle",
+      requestType = com.example.vehicles.Vehicle.class,
+      responseType = com.example.vehicles.OperationStatus.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.vehicles.Vehicle,
+      com.example.vehicles.OperationStatus> getCreateVehicleMethod() {
+    io.grpc.MethodDescriptor<com.example.vehicles.Vehicle, com.example.vehicles.OperationStatus> getCreateVehicleMethod;
+    if ((getCreateVehicleMethod = VehicleServiceGrpc.getCreateVehicleMethod) == null) {
+      synchronized (VehicleServiceGrpc.class) {
+        if ((getCreateVehicleMethod = VehicleServiceGrpc.getCreateVehicleMethod) == null) {
+          VehicleServiceGrpc.getCreateVehicleMethod = getCreateVehicleMethod =
+              io.grpc.MethodDescriptor.<com.example.vehicles.Vehicle, com.example.vehicles.OperationStatus>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateVehicle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.Vehicle.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.OperationStatus.getDefaultInstance()))
+              .setSchemaDescriptor(new VehicleServiceMethodDescriptorSupplier("CreateVehicle"))
+              .build();
+        }
+      }
+    }
+    return getCreateVehicleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.vehicles.VehicleId,
+      com.example.vehicles.Vehicle> getGetVehicleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetVehicle",
+      requestType = com.example.vehicles.VehicleId.class,
+      responseType = com.example.vehicles.Vehicle.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.vehicles.VehicleId,
+      com.example.vehicles.Vehicle> getGetVehicleMethod() {
+    io.grpc.MethodDescriptor<com.example.vehicles.VehicleId, com.example.vehicles.Vehicle> getGetVehicleMethod;
+    if ((getGetVehicleMethod = VehicleServiceGrpc.getGetVehicleMethod) == null) {
+      synchronized (VehicleServiceGrpc.class) {
+        if ((getGetVehicleMethod = VehicleServiceGrpc.getGetVehicleMethod) == null) {
+          VehicleServiceGrpc.getGetVehicleMethod = getGetVehicleMethod =
+              io.grpc.MethodDescriptor.<com.example.vehicles.VehicleId, com.example.vehicles.Vehicle>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVehicle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.VehicleId.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.Vehicle.getDefaultInstance()))
+              .setSchemaDescriptor(new VehicleServiceMethodDescriptorSupplier("GetVehicle"))
+              .build();
+        }
+      }
+    }
+    return getGetVehicleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.vehicles.Empty,
+      com.example.vehicles.VehicleList> getListVehiclesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListVehicles",
+      requestType = com.example.vehicles.Empty.class,
+      responseType = com.example.vehicles.VehicleList.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.vehicles.Empty,
+      com.example.vehicles.VehicleList> getListVehiclesMethod() {
+    io.grpc.MethodDescriptor<com.example.vehicles.Empty, com.example.vehicles.VehicleList> getListVehiclesMethod;
+    if ((getListVehiclesMethod = VehicleServiceGrpc.getListVehiclesMethod) == null) {
+      synchronized (VehicleServiceGrpc.class) {
+        if ((getListVehiclesMethod = VehicleServiceGrpc.getListVehiclesMethod) == null) {
+          VehicleServiceGrpc.getListVehiclesMethod = getListVehiclesMethod =
+              io.grpc.MethodDescriptor.<com.example.vehicles.Empty, com.example.vehicles.VehicleList>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVehicles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.VehicleList.getDefaultInstance()))
+              .setSchemaDescriptor(new VehicleServiceMethodDescriptorSupplier("ListVehicles"))
+              .build();
+        }
+      }
+    }
+    return getListVehiclesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.vehicles.VehicleId,
+      com.example.vehicles.OperationStatus> getDeleteVehicleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteVehicle",
+      requestType = com.example.vehicles.VehicleId.class,
+      responseType = com.example.vehicles.OperationStatus.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.vehicles.VehicleId,
+      com.example.vehicles.OperationStatus> getDeleteVehicleMethod() {
+    io.grpc.MethodDescriptor<com.example.vehicles.VehicleId, com.example.vehicles.OperationStatus> getDeleteVehicleMethod;
+    if ((getDeleteVehicleMethod = VehicleServiceGrpc.getDeleteVehicleMethod) == null) {
+      synchronized (VehicleServiceGrpc.class) {
+        if ((getDeleteVehicleMethod = VehicleServiceGrpc.getDeleteVehicleMethod) == null) {
+          VehicleServiceGrpc.getDeleteVehicleMethod = getDeleteVehicleMethod =
+              io.grpc.MethodDescriptor.<com.example.vehicles.VehicleId, com.example.vehicles.OperationStatus>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteVehicle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.VehicleId.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.vehicles.OperationStatus.getDefaultInstance()))
+              .setSchemaDescriptor(new VehicleServiceMethodDescriptorSupplier("DeleteVehicle"))
+              .build();
+        }
+      }
+    }
+    return getDeleteVehicleMethod;
+  }
+
+  /**
+   * Creates a new async stub that supports all call types for the service
+   */
+  public static VehicleServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<VehicleServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VehicleServiceStub>() {
+        @java.lang.Override
+        public VehicleServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VehicleServiceStub(channel, callOptions);
+        }
+      };
+    return VehicleServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
+   */
+  public static VehicleServiceBlockingStub newBlockingStub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<VehicleServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VehicleServiceBlockingStub>() {
+        @java.lang.Override
+        public VehicleServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VehicleServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return VehicleServiceBlockingStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static VehicleServiceFutureStub newFutureStub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<VehicleServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<VehicleServiceFutureStub>() {
+        @java.lang.Override
+        public VehicleServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new VehicleServiceFutureStub(channel, callOptions);
+        }
+      };
+    return VehicleServiceFutureStub.newStub(factory, channel);
+  }
+
+  /**
+   */
+  public interface AsyncService {
+
+    /**
+     */
+    default void createVehicle(com.example.vehicles.Vehicle request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateVehicleMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getVehicle(com.example.vehicles.VehicleId request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.Vehicle> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVehicleMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void listVehicles(com.example.vehicles.Empty request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.VehicleList> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVehiclesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteVehicle(com.example.vehicles.VehicleId request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVehicleMethod(), responseObserver);
+    }
+  }
+
+  /**
+   * Base class for the server implementation of the service VehicleService.
+   */
+  public static abstract class VehicleServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return VehicleServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service VehicleService.
+   */
+  public static final class VehicleServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<VehicleServiceStub> {
+    private VehicleServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected VehicleServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new VehicleServiceStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void createVehicle(com.example.vehicles.Vehicle request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateVehicleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getVehicle(com.example.vehicles.VehicleId request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.Vehicle> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetVehicleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listVehicles(com.example.vehicles.Empty request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.VehicleList> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListVehiclesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteVehicle(com.example.vehicles.VehicleId request,
+        io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteVehicleMethod(), getCallOptions()), request, responseObserver);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do synchronous rpc calls to service VehicleService.
+   */
+  public static final class VehicleServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<VehicleServiceBlockingStub> {
+    private VehicleServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected VehicleServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new VehicleServiceBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.example.vehicles.OperationStatus createVehicle(com.example.vehicles.Vehicle request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateVehicleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.vehicles.Vehicle getVehicle(com.example.vehicles.VehicleId request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetVehicleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.vehicles.VehicleList listVehicles(com.example.vehicles.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListVehiclesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.vehicles.OperationStatus deleteVehicle(com.example.vehicles.VehicleId request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteVehicleMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service VehicleService.
+   */
+  public static final class VehicleServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<VehicleServiceFutureStub> {
+    private VehicleServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected VehicleServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new VehicleServiceFutureStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.vehicles.OperationStatus> createVehicle(
+        com.example.vehicles.Vehicle request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateVehicleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.vehicles.Vehicle> getVehicle(
+        com.example.vehicles.VehicleId request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetVehicleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.vehicles.VehicleList> listVehicles(
+        com.example.vehicles.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListVehiclesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.vehicles.OperationStatus> deleteVehicle(
+        com.example.vehicles.VehicleId request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteVehicleMethod(), getCallOptions()), request);
+    }
+  }
+
+  private static final int METHODID_CREATE_VEHICLE = 0;
+  private static final int METHODID_GET_VEHICLE = 1;
+  private static final int METHODID_LIST_VEHICLES = 2;
+  private static final int METHODID_DELETE_VEHICLE = 3;
+
+  private static final class MethodHandlers<Req, Resp> implements
+      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+    private final AsyncService serviceImpl;
+    private final int methodId;
+
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
+      this.serviceImpl = serviceImpl;
+      this.methodId = methodId;
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        case METHODID_CREATE_VEHICLE:
+          serviceImpl.createVehicle((com.example.vehicles.Vehicle) request,
+              (io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus>) responseObserver);
+          break;
+        case METHODID_GET_VEHICLE:
+          serviceImpl.getVehicle((com.example.vehicles.VehicleId) request,
+              (io.grpc.stub.StreamObserver<com.example.vehicles.Vehicle>) responseObserver);
+          break;
+        case METHODID_LIST_VEHICLES:
+          serviceImpl.listVehicles((com.example.vehicles.Empty) request,
+              (io.grpc.stub.StreamObserver<com.example.vehicles.VehicleList>) responseObserver);
+          break;
+        case METHODID_DELETE_VEHICLE:
+          serviceImpl.deleteVehicle((com.example.vehicles.VehicleId) request,
+              (io.grpc.stub.StreamObserver<com.example.vehicles.OperationStatus>) responseObserver);
+          break;
+        default:
+          throw new AssertionError();
+      }
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public io.grpc.stub.StreamObserver<Req> invoke(
+        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        default:
+          throw new AssertionError();
+      }
+    }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateVehicleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.example.vehicles.Vehicle,
+              com.example.vehicles.OperationStatus>(
+                service, METHODID_CREATE_VEHICLE)))
+        .addMethod(
+          getGetVehicleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.example.vehicles.VehicleId,
+              com.example.vehicles.Vehicle>(
+                service, METHODID_GET_VEHICLE)))
+        .addMethod(
+          getListVehiclesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.example.vehicles.Empty,
+              com.example.vehicles.VehicleList>(
+                service, METHODID_LIST_VEHICLES)))
+        .addMethod(
+          getDeleteVehicleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.example.vehicles.VehicleId,
+              com.example.vehicles.OperationStatus>(
+                service, METHODID_DELETE_VEHICLE)))
+        .build();
+  }
+
+  private static abstract class VehicleServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    VehicleServiceBaseDescriptorSupplier() {}
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+      return com.example.vehicles.VehicleProto.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("VehicleService");
+    }
+  }
+
+  private static final class VehicleServiceFileDescriptorSupplier
+      extends VehicleServiceBaseDescriptorSupplier {
+    VehicleServiceFileDescriptorSupplier() {}
+  }
+
+  private static final class VehicleServiceMethodDescriptorSupplier
+      extends VehicleServiceBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final java.lang.String methodName;
+
+    VehicleServiceMethodDescriptorSupplier(java.lang.String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
+    }
+  }
+
+  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
+
+  public static io.grpc.ServiceDescriptor getServiceDescriptor() {
+    io.grpc.ServiceDescriptor result = serviceDescriptor;
+    if (result == null) {
+      synchronized (VehicleServiceGrpc.class) {
+        result = serviceDescriptor;
+        if (result == null) {
+          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+              .setSchemaDescriptor(new VehicleServiceFileDescriptorSupplier())
+              .addMethod(getCreateVehicleMethod())
+              .addMethod(getGetVehicleMethod())
+              .addMethod(getListVehiclesMethod())
+              .addMethod(getDeleteVehicleMethod())
+              .build();
+        }
+      }
+    }
+    return result;
+  }
+}

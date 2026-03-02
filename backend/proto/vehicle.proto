@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package vehicles;
+
+option java_multiple_files = true;
+option java_package = "com.example.vehicles";
+option java_outer_classname = "VehicleProto";
+
+message Vehicle {
+  string matricula = 1;
+  string vin = 2;
+  string modelo = 3;
+  string marca = 4;
+  string tipo = 5;
+}
+
+message VehicleId {
+  string matricula = 1;
+}
+
+message VehicleList {
+  repeated Vehicle vehicles = 1;
+}
+
+message Empty {}
+
+message OperationStatus {
+  bool ok = 1;
+  string message = 2;
+}
+
+service VehicleService {
+  rpc CreateVehicle (Vehicle) returns (OperationStatus);
+  rpc GetVehicle (VehicleId) returns (Vehicle);
+  rpc ListVehicles (Empty) returns (VehicleList);
+  rpc DeleteVehicle (VehicleId) returns (OperationStatus);
+}
